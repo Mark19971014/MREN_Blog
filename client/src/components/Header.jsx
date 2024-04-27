@@ -11,6 +11,7 @@ export default function Header() {
   const dispatch = useDispatch();
   const {currentUser} = useSelector(state => state.user);
   const {theme} = useSelector((state) => state.theme);
+  
   return (
     <Navbar className="border-b-2">
       <Link
@@ -62,7 +63,7 @@ export default function Header() {
             <span className="block text-sm">@{currentUser.username}</span>
             <span className="block text-sm font-medium truncate">{currentUser.email}</span>
             </Dropdown.Header>
-              <Link to ={'/dashboard ? tab = profile'}>
+              <Link to ={'/dashboard?tab=profile'}>
                 <Dropdown.Item>Profile</Dropdown.Item>
               </Link>
               <Dropdown.Divider/>
