@@ -17,6 +17,7 @@ export const create = async (req, res, next) => {
     ...req.body,
     slug,
     userId: req.user.id,
+    
   });
   try {
     const savedPost = await newPost.save();
